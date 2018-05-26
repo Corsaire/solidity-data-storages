@@ -1,2 +1,2 @@
-# solidity-data-storages
-Generic data storages for Solidity
+# solidity-data-structures
+Generic data structures for Solidity
