@@ -15,6 +15,7 @@ contract IterableMapping {
     function add(TKey key, TValue value) public
     {
         values[key] = value;
+        keysIndexes[key] = keys.length;
         keys.push(key);
     }
 
@@ -32,6 +33,7 @@ contract IterableMapping {
     {
         return keys.length;
     }
+
 
     function getRangeKeys(uint start, uint count) returns(TKey[])
     {
