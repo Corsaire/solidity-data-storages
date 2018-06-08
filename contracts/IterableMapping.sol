@@ -21,7 +21,8 @@ contract IterableMapping {
     function delete(TKey key) public
     {
         uint index = keysIndexes[key];
-        values.delete(key);
+        delete values[key];
+        delete keysIndexes[key];
         keys[index] = keys[keys.length - 1];
         keys.length--;
         keysIndexes[keys[index]] = index;
